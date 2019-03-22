@@ -1,0 +1,49 @@
+// colors:
+$darker: #27283D;
+
+$body-bg: #1E1D30;
+$body-color: rgb(222, 222, 248);
+$primary: #BE54EE !default;
+$secondary: $darker;
+$info: #3461A1;
+
+// jumbotron
+// $jumbotron-color;
+$jumbotron-bg: $darker;
+
+// dropdown variables
+$dropdown-bg: $darker;
+$dropdown-color: white;
+$dropdown-link-color: white;
+$dropdown-link-hover-color: white;
+$dropdown-link-hover-bg: $primary;
+$dropdown-link-active-color: $primary;
+$dropdown-link-active-bg: $primary;
+
+// forms
+$input-bg: #2E3054;
+$input-color: white;
+$input-border-color: $primary;
+$modal-header-border-color: rgb(9, 9, 26);
+
+// modals
+$modal-content-bg: $darker;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+#main {
+    padding-top: 50px;
+}
+hr {
+    border-top: 1px solid $primary;
+}
+.card {
+    background-color: transparent;
+}
+.card-body {
+    background-color: $darker;
+}
+.btn-custom {
+    border: 1px solid $primary;
+    color: $primary;
+}
