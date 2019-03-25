@@ -5,9 +5,11 @@ import Vuex from 'vuex'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(fas)
+library.add(far)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
@@ -15,6 +17,8 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 import Home from './components/Home.vue'
 import Movies from './components/Movies.vue'
 import MovieCard from './components/MovieCard.vue'
+import Friends from './components/Friends.vue'
+import FriendProfile from './components/FriendProfile.vue'
 import PageNotFound from './components/PageNotFound.vue'
 
 // settings
@@ -58,6 +62,20 @@ const router = new VueRouter({
       },
     },
     {
+      path: '/friends',
+      component: Friends,
+      name: RouteNames.Friends      
+    },
+    {
+      path: '/friends/:friendId',
+      component: FriendProfile,
+      name: RouteNames.FriendProfile,
+      props: true,
+      meta: {
+        requiresAuth: true
+      },
+    },
+    {
       path: '*',
       component: PageNotFound
     }
@@ -88,6 +106,5 @@ new Vue({
   render: h => h(App),
 }).$mount('#app')
 
-// import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './styles/custom.scss'

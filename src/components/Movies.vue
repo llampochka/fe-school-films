@@ -33,7 +33,7 @@
           </b-col>
           <b-col  class="mb-3 mb-lg-0">
             <b-row>
-              <b-col md="4" lg="5">
+              <b-col md="4" lg="5" class="mb-3 mb-lg-0">
                 Filter by: 
                 <b-dropdown text="Name" variant="info">
                   <b-dropdown-item>Name</b-dropdown-item>

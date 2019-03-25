@@ -1,0 +1,16 @@
+<template>
+  <div>
+    Friends
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Friends',
+  props: {
+    msg: String
+  }
+}
+</script>
+
+

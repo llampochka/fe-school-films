@@ -1,18 +1,22 @@
 // colors:
-$darker: #27283D;
+$lighter: #27283D;
+$lighter2: #2E3054;
 
 $body-bg: #1E1D30;
 $body-color: rgb(222, 222, 248);
 $primary: #BE54EE !default;
-$secondary: $darker;
+$secondary: $lighter;
 $info: #3461A1;
 
+// nav
+$navbar-dark-color: white;
+$navbar-dark-active-color: $lighter;
+
 // jumbotron
-// $jumbotron-color;
-$jumbotron-bg: $darker;
+$jumbotron-bg: $lighter;
 
 // dropdown variables
-$dropdown-bg: $darker;
+$dropdown-bg: $lighter;
 $dropdown-color: white;
 $dropdown-link-color: white;
 $dropdown-link-hover-color: white;
@@ -21,15 +25,32 @@ $dropdown-link-active-color: $primary;
 $dropdown-link-active-bg: $primary;
 
 // forms
-$input-bg: #2E3054;
+$input-bg: $lighter;
 $input-color: white;
 $input-border-color: $primary;
 $modal-header-border-color: rgb(9, 9, 26);
 
 // modals
-$modal-content-bg: $darker;
+$modal-content-bg: $lighter2;
+
+// breadcrumbs
+$breadcrumb-bg: $lighter2;
+
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// custom
+.navbar-brand span {
+    font-size: 20px;
+    line-height: 38px;
+    background-color: $lighter2;
+    border-radius: 50%;
+    color: $primary;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+}
 
 #main {
     padding-top: 50px;
@@ -41,9 +62,18 @@ hr {
     background-color: transparent;
 }
 .card-body {
-    background-color: $darker;
+    background-color: $lighter;
 }
 .btn-custom {
     border: 1px solid $primary;
     color: $primary;
+}
+
+.raiting {
+    padding-left: 0;
+
+    li {
+        display: inline;
+        list-style: none;
+    }
 }
