@@ -1,9 +1,9 @@
 <template>
   <div>
 
-    <b-row class="mb-3">
+    <b-row class="mb-3 content-header">
       <b-col md="8"><h1>{{ movie.title }}</h1></b-col>
-      <b-col md="4" class="text-md-right">
+      <b-col md="4" class="text-md-right content-header__btns">
         <b-button-group>
           <b-button @click="changeLayout('table')" :pressed="showBy == 'table'" variant="primary">
             <font-awesome-icon icon="clone" /> Clone movie to my collection
@@ -14,7 +14,7 @@
 
     <b-breadcrumb :items="breadcrumbs" />
     
-    <b-card img-left :img-src="require(`@/assets/${movie.imgSrc}`)">
+    <b-card img-left :img-src="movie.imgSrc">
       
       <b-card-text>
         <p>
@@ -31,12 +31,15 @@
       </b-card-text>
     </b-card>
 
+    <!-- <img :src="test" /> -->
+
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
 import axios from 'axios'
+
 Vue.use(axios)
 
 export default {
@@ -47,7 +50,8 @@ export default {
   },
   data() {
     return {
-      movie: null
+      movie: null,
+      test: '/img/titanic1.jpg'
     }    
   },
   mounted() {
@@ -71,7 +75,8 @@ export default {
             active: true
           }
         ]
-    } 
+    }
+    
   }
 }
 </script>

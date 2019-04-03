@@ -7,6 +7,11 @@ $body-color: rgb(222, 222, 248);
 $primary: #BE54EE !default;
 $secondary: $lighter;
 $info: #3461A1;
+$success: #185F4B;
+
+// alerts
+$alert-bg-level: -4;
+$alert-border-level: -4;
 
 // nav
 $navbar-dark-color: white;
@@ -53,7 +58,10 @@ $breadcrumb-bg: $lighter2;
 }
 
 #main {
-    padding-top: 50px;
+    padding: 50px 0;
+}
+.content-header__btns {
+    line-height: 2.5em;
 }
 hr {
     border-top: 1px solid $primary;
@@ -77,3 +85,53 @@ hr {
         list-style: none;
     }
 }
+
+.panel {
+    .panel__label {
+        margin: 0 0.5em 0 0;
+        vertical-align: middle;
+    }
+    .panel__filter-input {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 0.5em;
+    }
+}
+
+.userMenu__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.form-footer {
+    padding: 1rem 0;
+    text-align: right;
+    border-top: 1px solid $modal-header-border-color;
+}
+.form-footer-modal {
+    margin: 0 -1rem -1rem;
+    padding: 1rem;
+}
+
+.icon-decorator {
+    color: $lighter2;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    background-color: $lighter2;
+  }

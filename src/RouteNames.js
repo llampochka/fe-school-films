@@ -3,7 +3,8 @@ const RouteNames = {
     Movies: 'Movies',
     MovieCard: 'MovieCard',
     Friends: 'Friends',
-    FriendProfile: 'FriendProfile'
+    FriendProfile: 'FriendProfile',
+    Login: 'Login'
 };
 export default RouteNames;
   

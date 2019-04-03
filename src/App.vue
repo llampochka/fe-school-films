@@ -20,53 +20,12 @@
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto">
               <b-nav-text>
-                <b-button v-if="!loggedIn" v-b-modal.modal1 class="mb-md-2 mb-lg-0">
-                  <font-awesome-icon icon="sign-in-alt"/> Sign in
-                </b-button>
+                <login-modal v-if="!isLoggedIn"></login-modal>                
               </b-nav-text>
-
-              <!-- Modal Component Sign In -->
-              <b-modal
-                id="modal1"
-                header-close-variant="light"
-                title="Sign In"
-                @ok="signIn"
-                ok-title="Sign In"
-                centered
-              >
-                <b-form>
-                  <b-form-group id="emailGroup" label="Email address:" label-for="email">
-                    <b-form-input
-                      id="email"
-                      type="email"
-                      v-model="form.email"
-                      required
-                      placeholder="Enter email"
-                    />
-                  </b-form-group>
-
-                  <b-form-group id="pwdGroup" label="Your Password:" label-for="pwd">
-                    <b-form-input
-                      id="pwd"
-                      type="password"
-                      v-model="form.pwd"
-                      required
-                      placeholder="Enter password"
-                    />
-                  </b-form-group>
-                </b-form>
-              </b-modal>
-
               <b-nav-text>
-                <register-modal v-if="!loggedIn"></register-modal>
+                <register-modal v-if="!isLoggedIn"></register-modal>
               </b-nav-text>
-
-              <b-nav-item-dropdown v-if="loggedIn" right>
-                <!-- Using button-content slot -->
-                <template slot="button-content">User</template>
-                <b-dropdown-item href="#">Profile</b-dropdown-item>
-                <b-dropdown-item href="#" @click="toggleLogin">Signout</b-dropdown-item>
-              </b-nav-item-dropdown>
+              <user-menu></user-menu>              
             </b-navbar-nav>
           </b-collapse>
         </div>
@@ -80,54 +39,34 @@
       </div>
     </div>
     <!-- /main content wrapper -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; Movies, Alena Moskalenko, T-systems RUS</span>
+      </div>
+    </footer>
+    <!-- Footer -->
+
   </div>
 </template>
 
 <script>
-import RegisterModal from "./components/RegisterModal.vue";
-import AuthService from "./services/AuthService";
-
-const AppAuthService = new AuthService();
+import RegisterModal from "./components/RegisterModal.vue"
+import LoginModal from "./components/LoginModal.vue"
+import UserMenu from "./components/UserMenu.vue"
 
 export default {
   name: "app",
   components: {
-    RegisterModal
-  },
-  data() {
-    return {
-      loggedIn: false,
-      form: {}
-    };
-  },
-  methods: {
-    signIn() {
-      this.loggedIn = true;
-      AppAuthService.login();
-    },
-    toggleLogin() {
-      if (this.loggedIn) {
-        this.loggedIn = false;
-        AppAuthService.logout();
-      } else {
-        this.loggedIn = true;
-        AppAuthService.login();
-      }
-    },
-    register() {
-      return true;
+    RegisterModal,
+    UserMenu,
+    LoginModal
+  }, 
+  computed: {
+    isLoggedIn() {
+      return this.$store.state.loggedIn;
     }
   }
 };
 </script>
-
-<style>
-/* #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
-</style>

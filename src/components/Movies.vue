@@ -1,9 +1,13 @@
 <template>
   <div>
 
-    <b-row class="mb-3">
+    isLoggedIn: {{ isLoggedIn }}
+    currentUser: {{ currentUser }}
+    currentUser.name: {{ currentUser.name }}
+
+    <b-row class="mb-3 content-header">
       <b-col md="8"><h1>Movie collection</h1></b-col>
-      <b-col md="4" class="text-md-right">
+      <b-col md="4" class="text-md-right content-header__btns">
         <b-button-group>
           <b-button @click="changeLayout('cards')" :pressed="showBy == 'cards'" variant="primary">
             <font-awesome-icon icon="th" /> Cards
@@ -17,10 +21,10 @@
 
     <b-row class="panel">
 
-      <b-col lg="10">
-        <b-row>
+      <!-- <b-col lg="10"> -->
+        <!-- <b-row> -->
           <b-col lg="4"  class="mb-3 mb-lg-0">
-            Sort by: 
+            <label class="panel__label">Sort by: </label> 
             <b-dropdown text="Default" variant="info">
               <b-dropdown-item>Default</b-dropdown-item>
               <b-dropdown-item>Name</b-dropdown-item>
@@ -32,23 +36,23 @@
             </b-button-group>
           </b-col>
           <b-col  class="mb-3 mb-lg-0">
-            <b-row>
-              <b-col md="4" lg="5" class="mb-3 mb-lg-0">
-                Filter by: 
+            <!-- <b-row>
+              <b-col md="3" lg="4" class="mb-3 mb-lg-0"> -->
+                <label class="panel__label">Filter by: </label> 
                 <b-dropdown text="Name" variant="info">
                   <b-dropdown-item>Name</b-dropdown-item>
                   <b-dropdown-item>Year</b-dropdown-item>
                 </b-dropdown>
-              </b-col>
-              <b-col>
-                <b-form-input type="text" placeholder="Filter value" />
-              </b-col>
-            </b-row>
+              <!-- </b-col>
+              <b-col> -->
+                <b-form-input type="text" placeholder="Filter value" class="panel__filter-input w-auto" />
+              <!-- </b-col>
+            </b-row> -->
             
             
           </b-col>
-        </b-row>
-      </b-col>
+        <!-- </b-row> -->
+      <!-- </b-col> -->
      
       <b-col class="text-lg-right" lg="2">
         <b-button variant="custom">
@@ -58,10 +62,10 @@
     <hr/>
 
     <b-row v-if="showBy == 'cards'">
-      <b-col v-for="movie in movies" :key="movie.id" md="4" lg="3">
+      <b-col v-for="movie in movies" :key="movie.id" md="4" lg="4">
         <b-card no-body>
           <b-link :to="{name: $routeNames.MovieCard, params: {movieId: movie.id}}">
-            <b-card-img :src="require(`@/assets/${movie.imgSrc}`)" class="card-img-top" :alt="movie.title" />
+            <b-card-img :src="movie.imgSrc" class="card-img-top" :alt="movie.title" />
           </b-link>
           <b-card-body>
             <h4>
@@ -127,8 +131,17 @@ export default {
     changeLayout(val) {
       this.showBy = val;
     }
-  }
-  // computed: {
+  },
+  computed: {
+    isLoggedIn() {
+      return this.$store.state.loggedIn;
+    },
+    currentUser() {
+      return this.$store.state.user;
+    },
+    counter() {
+      return this.$store.state.count;
+    } 
     // movies() {
     //   let movies = [
     //     {
@@ -146,7 +159,7 @@ export default {
     //   ];
     //   return movies;
     // }
-  // }
+  }
 }
 </script>
 
