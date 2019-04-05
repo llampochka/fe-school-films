@@ -29,7 +29,7 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### json-server support
-json-server is neccessary for REST functionality
+json-server is neccessary for REST functionality, 
 to use it run:
 ```
 json-server --watch db.json --port 3005
