@@ -1,19 +1,14 @@
-import axios from 'axios'
+import UserService from "../services/UserService"
 
 const AuthService = {
 
   logIn(user) {
     return new Promise((resolve, reject) => {
 
-      axios
-        .get('/api/users')
-        .then(response => {
-          let data = response.data;
-          const currentUser = data.filter(userItem => {
-            return userItem.login == user.login
-          })[0]
-          if (currentUser) {                        
-            resolve(currentUser)
+      UserService.getOneByLogin(user.login)
+        .then(user => {
+          if (user) {                        
+            resolve(user)
           } else {
             reject('Username and/or password is wrong')
           }

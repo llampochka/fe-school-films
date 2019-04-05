@@ -26,7 +26,7 @@ $dropdown-color: white;
 $dropdown-link-color: white;
 $dropdown-link-hover-color: white;
 $dropdown-link-hover-bg: $primary;
-$dropdown-link-active-color: $primary;
+$dropdown-link-active-color: white;
 $dropdown-link-active-bg: $primary;
 
 // forms
@@ -104,6 +104,9 @@ hr {
     border-radius: 50%;
 }
 
+.custom-file-label::after {
+    background-color: $secondary
+}
 .form-footer {
     padding: 1rem 0;
     text-align: right;

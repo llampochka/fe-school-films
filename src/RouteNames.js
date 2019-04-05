@@ -1,5 +1,6 @@
 const RouteNames = {
     Home: 'Home',
+    Profile: 'Profile',
     Movies: 'Movies',
     MovieCard: 'MovieCard',
     Friends: 'Friends',

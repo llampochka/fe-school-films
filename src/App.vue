@@ -56,6 +56,8 @@ import RegisterModal from "./components/RegisterModal.vue"
 import LoginModal from "./components/LoginModal.vue"
 import UserMenu from "./components/UserMenu.vue"
 
+import UserService from './services/UserService'
+
 export default {
   name: "app",
   components: {
@@ -63,10 +65,35 @@ export default {
     UserMenu,
     LoginModal
   }, 
+  created: function () {
+    this.setCurrentUser()
+  },
+  methods: {
+    setCurrentUser() {
+
+      if(this.isLoggedIn) {
+        const userID = localStorage.getItem('user_id');
+
+        if(userID){
+            return UserService.getOne(userID)
+                .then( user => {          
+                  this.$store.dispatch('updateCurrentUser', user)
+                })
+                .catch(err => {
+                  this.flashMessage.error({
+                    title: 'Error', 
+                    message: err
+                  })
+                })
+        } 
+      }
+      
+    }
+  },
   computed: {
     isLoggedIn() {
       return this.$store.state.loggedIn;
-    }
+    }    
   }
 };
 </script>

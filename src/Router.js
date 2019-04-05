@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 // project components
 import Home from './components/Home.vue'
+import Profile from './components/Profile.vue'
 import Movies from './components/Movies.vue'
 import MovieCard from './components/MovieCard.vue'
 import Friends from './components/Friends.vue'
@@ -34,9 +35,20 @@ const router = new VueRouter({
         redirect: {name: RouteNames.Home}
       },
       {
+        path: '/profile',
+        component: Profile,
+        name: RouteNames.Profile ,
+        meta: {
+          requiresAuth: true
+        },     
+      },
+      {
         path: '/movies',
         component: Movies,
-        name: RouteNames.Movies      
+        name: RouteNames.Movies,
+        meta: {
+            requiresAuth: true
+        },      
       },
       {
         path: '/movies/:movieId',
@@ -80,7 +92,7 @@ const router = new VueRouter({
     if (to.matched.some(record => record.meta.requiresAuth)) {
 
       const isLoggedIn = store.state.loggedIn;
-      
+
       if (!isLoggedIn) {
         next({
           path: '/login',

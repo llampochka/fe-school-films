@@ -3,9 +3,9 @@
     <!-- Using button-content slot -->
     <template slot="button-content">
       <img :src="currentUser.avatar" class="userMenu__avatar" />
-      {{ currentUser.name }}
+      {{ currentUser.name }}     
     </template>
-    <b-dropdown-item href="#">Profile</b-dropdown-item>
+    <b-dropdown-item :to="{name: $routeNames.Profile}">Profile</b-dropdown-item>
     <b-dropdown-item href="#" @click="logOut">Log out</b-dropdown-item>
   </b-nav-item-dropdown>
 </template>
@@ -13,20 +13,18 @@
 <script>
 export default {
   name: 'Friends',
-  props: {
-    msg: String
-  },
   methods: {
     logOut() {
-      this.$store.dispatch('logOut');
-    }
+      this.$store.dispatch('logOut')
+      this.$router.push('/')  
+    }    
   },
   computed: {
     isLoggedIn() {
-      return this.$store.state.loggedIn;
+      return this.$store.state.loggedIn
     },
     currentUser() {
-      return this.$store.state.user;
+      return this.$store.state.user
     }
   }
 }
