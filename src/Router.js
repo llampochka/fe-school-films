@@ -1,13 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import {PAGE_NOT_FOUND} from './settings'
 
 // project components
 import Home from './components/Home.vue'
-import Profile from './components/Profile.vue'
-import Movies from './components/Movies.vue'
-import MovieCard from './components/MovieCard.vue'
-import Friends from './components/Friends.vue'
-import FriendProfile from './components/FriendProfile.vue'
+import Profile from './components/Users/Profile.vue'
+import MoviesPage from './components/Movies/MoviesPage.vue'
+import MovieCard from './components/Movies/MovieCard.vue'
+import Friends from './components/Users/Friends.vue'
+import User from './components/Users/User.vue'
+import FriendProfile from './components/Users/FriendProfile.vue'
+import FriendMovies from './components/Users/FriendMovies.vue'
 import Login from './components/Login.vue'
 import PageNotFound from './components/PageNotFound.vue'
 
@@ -44,14 +47,14 @@ const router = new VueRouter({
       },
       {
         path: '/movies',
-        component: Movies,
-        name: RouteNames.Movies,
+        component: MoviesPage,
+        name: RouteNames.MoviesPage,
         meta: {
             requiresAuth: true
         },      
       },
       {
-        path: '/movies/:movieId',
+        path: '/movies/:movieID',
         component: MovieCard,
         name: RouteNames.MovieCard,
         props: true,
@@ -68,18 +71,43 @@ const router = new VueRouter({
         },     
       },
       {
-        path: '/friends/:friendId',
-        component: FriendProfile,
-        name: RouteNames.FriendProfile,
+        path: '/friends/:userID',
+        component: User,
+        name: RouteNames.User,
         props: true,
         meta: {
           requiresAuth: true
         },
+        children: [
+          {
+            path: '',
+            component: FriendProfile,
+            name: RouteNames.FriendProfile,
+            props: true,
+            meta: {
+              noScroll: true
+            }
+          },
+          {
+            path: 'movies',
+            component: FriendMovies,
+            name: RouteNames.FriendMovies,
+            props: true,
+            meta: {
+              noScroll: true
+            }
+          }
+        ]
       },
       {
         path: '/login',
         component: Login,
         name: RouteNames.Login 
+      },
+      {
+        path: PAGE_NOT_FOUND,
+        component: PageNotFound,
+        name: RouteNames.PageNotFound
       },
       {
         path: '*',

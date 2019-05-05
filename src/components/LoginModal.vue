@@ -27,7 +27,7 @@ export default {
   }, 
   methods: {
     closeModal(modalRef) {
-      this.$refs[modalRef].hide();
+      this.$refs[modalRef].hide()
     }
   }
 }

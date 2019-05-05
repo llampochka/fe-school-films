@@ -11,19 +11,19 @@
           <b-navbar-toggle target="nav_collapse"/>
 
           <b-collapse is-nav id="nav_collapse">
-            <b-navbar-nav>
+            <b-navbar-nav v-if="isLoggedIn">
               <b-nav-item :to="{name: $routeNames.Home}">Home</b-nav-item>
-              <b-nav-item :to="{name: $routeNames.Movies}">Movies</b-nav-item>
+              <b-nav-item :to="{name: $routeNames.MoviesPage}">My movies</b-nav-item>
               <b-nav-item :to="{name: $routeNames.Friends}">Friends</b-nav-item>
             </b-navbar-nav>
 
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto">
-              <b-nav-text>
-                <login-modal v-if="!isLoggedIn"></login-modal>                
+              <b-nav-text v-show="!isLoggedIn">
+                <login-modal></login-modal>                
               </b-nav-text>
-              <b-nav-text>
-                <register-modal v-if="!isLoggedIn"></register-modal>
+              <b-nav-text v-show="!isLoggedIn">
+                <register-modal></register-modal>
               </b-nav-text>
               <user-menu></user-menu>              
             </b-navbar-nav>
@@ -32,6 +32,7 @@
       </b-navbar>
     </div>
     <!-- /navbar -->
+
     <!-- main content wrapper -->
     <div class="container">
       <div id="main">
@@ -39,6 +40,8 @@
       </div>
     </div>
     <!-- /main content wrapper -->
+
+    <FlashMessage></FlashMessage>
 
     <!-- Footer -->
     <footer class="footer">
@@ -54,9 +57,7 @@
 <script>
 import RegisterModal from "./components/RegisterModal.vue"
 import LoginModal from "./components/LoginModal.vue"
-import UserMenu from "./components/UserMenu.vue"
-
-import UserService from './services/UserService'
+import UserMenu from "./components/Users/UserMenu.vue"
 
 export default {
   name: "app",
@@ -72,27 +73,15 @@ export default {
     setCurrentUser() {
 
       if(this.isLoggedIn) {
-        const userID = localStorage.getItem('user_id');
-
-        if(userID){
-            return UserService.getOne(userID)
-                .then( user => {          
-                  this.$store.dispatch('updateCurrentUser', user)
-                })
-                .catch(err => {
-                  this.flashMessage.error({
-                    title: 'Error', 
-                    message: err
-                  })
-                })
-        } 
+        const user = JSON.parse(localStorage.getItem('user')) 
+        this.$store.dispatch('updateCurrentUser', user)
       }
       
     }
   },
   computed: {
     isLoggedIn() {
-      return this.$store.state.loggedIn;
+      return this.$store.state.loggedIn
     }    
   }
 };

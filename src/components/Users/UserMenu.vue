@@ -24,7 +24,7 @@ export default {
       return this.$store.state.loggedIn
     },
     currentUser() {
-      return this.$store.state.user
+      return this.$store.getters.user
     }
   }
 }

@@ -1,11 +1,14 @@
 const RouteNames = {
     Home: 'Home',
     Profile: 'Profile',
-    Movies: 'Movies',
+    MoviesPage: 'MoviesPage',
     MovieCard: 'MovieCard',
     Friends: 'Friends',
+    User: 'User',
     FriendProfile: 'FriendProfile',
-    Login: 'Login'
+    FriendMovies: 'FriendMovies',
+    Login: 'Login',
+    PageNotFound: 'PageNotFound'
 };
 export default RouteNames;
   

@@ -1,5 +1,7 @@
 import Vue from 'vue'
+
 import BootstrapVue from 'bootstrap-vue'
+Vue.use(BootstrapVue)
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -17,16 +19,22 @@ Vue.use(FlashMessage, {
   icon: true
 })
 
+import VeeValidate from 'vee-validate'
+Vue.use(VeeValidate, {
+  // This is the default
+  inject: true,
+  // Important to name this something other than 'fields'
+  fieldsBagName: 'veeFields'
+})
+
 import router from './Router'
 import store from './Store'
 import App from './App.vue'
 
 Vue.config.productionTip = false
 
-Vue.use(BootstrapVue)
-
-import _ from 'lodash';    
-Object.defineProperty(Vue.prototype, '$_', { value: _ })
+import _ from 'lodash'   
+Object.defineProperty(Vue.prototype, '$lodash', { value: _ })
 
 new Vue({
   store,
@@ -34,5 +42,9 @@ new Vue({
   render: h => h(App),
 }).$mount('#app')
 
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+// import 'bootstrap-vue/dist/bootstrap-vue.css'
+// import './styles/variables.scss'
+// import "../node_modules/bootstrap/scss/bootstrap.scss"
+
+// import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import './styles/custom.scss'

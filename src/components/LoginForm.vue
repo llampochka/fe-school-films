@@ -37,8 +37,6 @@
 
 <script>
 
-
-
 export default {
   name: 'LoginForm',
   props: {
@@ -50,14 +48,12 @@ export default {
       form: {},
       fieldsStates: {
         login: null
-      },
-      errors: {},
-      test: null
+      }
     }
   },
   computed: {
     resetText() {
-      return this.modal ? 'Cancel' : 'Reset';
+      return this.modal ? 'Cancel' : 'Reset'
     }
   },
   methods: {
@@ -78,10 +74,7 @@ export default {
             }
           )
           .catch(          
-            err => {     
-              // eslint-disable-next-line 
-              // console.log('err', err)       
-              
+            err => {        
               this.errors.login = err
               this.fieldsStates.login = false
             }
@@ -90,10 +83,9 @@ export default {
       },
       onReset(evt) {
         if(this.modal){
-          evt.preventDefault();
+          evt.preventDefault()
           // close parent modal
           this.$emit('exit', true)
-
         }
       }
     }

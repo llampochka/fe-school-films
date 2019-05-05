@@ -1,0 +1,82 @@
+// colors:
+$lighter: #27283D;
+$lighter2: #2E3054;
+$lighter3: #2A3759;
+
+$body-bg: #1E1D30;
+$body-color: rgb(222, 222, 248);
+// $primary: #BE54EE !default;
+$primary2: #E10071 !default;
+$primary: #D248BA !default;
+$secondary: $lighter;
+$info: #3461A1;
+$success: rgb(15, 175, 130);
+
+$black: #000;
+$yellow: yellow;
+$love: #F46F89;
+
+// alerts
+$alert-bg-level: -4;
+$alert-border-level: -4;
+
+// nav
+$navbar-dark-color: white;
+$navbar-dark-active-color: $lighter;
+
+// jumbotron
+$jumbotron-bg: $lighter;
+
+// dropdown variables
+$dropdown-bg: $lighter;
+$dropdown-color: white;
+$dropdown-link-color: white;
+$dropdown-link-hover-color: white;
+$dropdown-link-hover-bg: $primary;
+$dropdown-link-active-color: white;
+$dropdown-link-active-bg: $primary;
+
+// forms
+$input-bg: $lighter3;
+$input-color: white;
+$input-border-color: $info;
+$input-focus-border-color: $info;
+$input-btn-focus-width: .2rem !default;
+// $input-focus-box-shadow: $info;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width rgba($info, .25) !default;
+
+$input-group-addon-bg: $secondary;
+$input-placeholder-color: rgb(185, 183, 183);
+
+// modals
+$modal-content-bg: $lighter2;
+$modal-header-border-color: rgb(9, 9, 26);
+// $modal-content-bg: $body-bg;
+
+// breadcrumbs
+$breadcrumb-bg: $lighter2;
+
+// tables 
+$table-head-color: white;
+$table-head-bg: $lighter2;
+// $table-border-color: red;
+$table-dark-bg: transparent;
+$table-dark-accent-bg: $lighter2;
+
+// pagination
+$pagination-bg: $lighter2;
+$pagination-border-color: $primary;
+$pagination-hover-border-color: $primary;
+$pagination-hover-bg: $lighter;
+$pagination-disabled-bg: rgba($lighter2, 0.4);
+$pagination-disabled-border-color: $primary;
+
+// popover
+$popover-header-bg: $info;
+$popover-bg: $lighter3;
+$popover-border-color: $info;
+
+// list-group
+$list-group-bg: $body-bg;
+$list-group-color: $info;
+$list-group-border-color: $info;
