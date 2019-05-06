@@ -125,6 +125,12 @@ hr {
 }
 /* ----------------------------------- */
 
+.popover-header {
+    .close {
+        line-height: 0.5;
+    }
+}
+
 .userMenu__avatar {
     width: 40px;
     height: 40px;
@@ -201,6 +207,9 @@ hr {
             }
         }
     }
+}
+.comment-date {
+    font-size: 0.8em;
 }
   /* /comments ------------------------------------ */
 

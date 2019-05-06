@@ -13,7 +13,8 @@
                   <h5>
                     <b-link
                       :to="{name: $routeNames.FriendProfile, params: {userID: comment.user.id}}"
-                    >{{ comment.user.name }}</b-link>
+                    >{{ comment.user.name }}</b-link>,
+                    <span class="comment-date">{{ formattedDate(comment.date) }}</span>
                   </h5>
                   <div v-html="comment.text"></div>
                 </b-card-body>
@@ -144,6 +145,9 @@ export default {
       return comment.dislikes.find(item => {
         return item.userId === this.currentUser.id
       })
+    },
+    formattedDate(date) {
+      return new Date(date * 1000).toLocaleString()
     }
   },
   computed: {

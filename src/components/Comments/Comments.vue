@@ -2,7 +2,7 @@
   <div>
     <h3>
       Comments
-      <b-spinner label="Loading" v-if="updatingProcess"></b-spinner>
+      <b-spinner label="Loading" v-if="updatingProcess" small></b-spinner>
     </h3>
 
     <comment-form @addedNewComment="handleNewComment" :movie="movie"></comment-form>
