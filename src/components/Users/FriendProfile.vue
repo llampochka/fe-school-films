@@ -36,7 +36,7 @@ import RequestHandlers from "@/mixins/RequestHandlers"
 export default {
   name: 'FriendProfile',
   props: {
-    userID: String
+    userID: [String, Number]
   },
   data() {
     return {
@@ -75,8 +75,6 @@ export default {
           this.handleRequestFinished()
         })
     }
-
-
 
   },
   computed: {

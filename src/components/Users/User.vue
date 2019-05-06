@@ -11,7 +11,7 @@ import UserService from "@/services/UserService"
 export default {
   name: 'User',
   props: {
-    userID: String
+    userID: [String, Number]
   },
   data() {
     return {
