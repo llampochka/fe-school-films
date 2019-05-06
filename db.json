@@ -285,7 +285,9 @@
         "Adventure"
       ],
       "id": 15,
-      "userId": 1
+      "userId": 1,
+      "userRating": 7,
+      "rating": 7
     },
     {
       "title": "Amarcord",
