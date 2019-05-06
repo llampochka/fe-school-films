@@ -4,7 +4,7 @@
     <b-form  @submit="onSubmit" @reset="onReset">
       <b-form-group id="loginGroup" label="Login:" label-for="login">
         <b-form-input
-          id="login"
+          id="loginLogin"
           v-model="form.login"
           required
           :state="fieldsStates.login"
@@ -17,7 +17,7 @@
 
       <b-form-group id="pwdGroup" label="Your Password:" label-for="pwd">
         <b-form-input
-          id="pwd"
+          id="loginPwd"
           type="password"
           v-model="form.pwd"
           required
