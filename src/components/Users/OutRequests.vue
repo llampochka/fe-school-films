@@ -63,12 +63,15 @@ export default {
     };
   },
   created: function () {
-    UserService.getOutRequests(this.user).then(outRequests => {
-      this.outRequests = outRequests
-    });
+    this.getOutRequests(this.user)
   },
   mixins: [RequestHandlers],
   methods: {
+    getOutRequests(user) {
+      UserService.getOutRequests(user).then(outRequests => {
+        this.outRequests = outRequests
+      })
+    },
     sendRequest(sendToID) {
       sendToID = parseInt(sendToID)
 
@@ -88,10 +91,10 @@ export default {
         this.handleRequestFailed("This user is already your friend")
       } else {
         UserService.sendRequest(this.user, sendToID)
-          .then(data => {
-            this.$store.dispatch("updateCurrentUser", data.user)
+          .then(updatedUser => {
+            this.$store.dispatch("updateCurrentUser", updatedUser)
             this.handleRequestSuccess("Friendship request is sended! Just waiting for answer. Good luck!")
-            this.outRequests.push(data.possibleFriend)
+            this.getOutRequests(updatedUser)
           })
           .catch(err => {
             this.handleRequestFailed(err)

@@ -20,9 +20,14 @@
             id="email"
             type="email"
             v-model="form.email"
-            required
+            name="Email"
             placeholder="Enter email"
+            v-validate="'required|email'"
+            :state="validateState('Email')"
           />
+          <b-form-invalid-feedback>
+            <p v-for="(error, index) in errors.collect('Email')" :key="index">{{ error }}</p>
+          </b-form-invalid-feedback>
         </b-form-group>
 
         <b-form-group id="loginGroup" label-for="login">
@@ -59,6 +64,8 @@
           <b-form-input
             id="pwd"
             type="password"
+            name="password"
+            ref="password"
             v-model="form.pwd"
             required
             placeholder="Enter password"
@@ -69,10 +76,16 @@
           <b-form-input
             id="pwd2"
             type="password"
+            name="Confirm password"
             v-model="form.pwd2"
             required
+            v-validate="'required|confirmed:password'"
             placeholder="Confirm password"
+            :state="validateState('Confirm password')"
           />
+          <b-form-invalid-feedback>
+            <p v-for="(error, index) in errors.collect('Confirm password')" :key="index">{{ error }}</p>
+          </b-form-invalid-feedback>
         </b-form-group>
 
         <footer class="form-footer form-footer-modal">
@@ -81,7 +94,6 @@
             <b-spinner v-if="updatingProcess" small></b-spinner>Submit
           </b-button>
         </footer>
-
       </b-form>
     </b-modal>
   </span>
@@ -115,6 +127,10 @@ export default {
           this.handleRequestStart()
 
           this.form.avatar = "/img/users/default.png"
+          this.form.requestsOut = []
+          this.form.requestsIn = []
+          this.form.friendIDs = []
+          this.form.token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 
           UserService.createOne(this.form)
             .then(() => {
@@ -126,7 +142,6 @@ export default {
             })
             .finally(() => {
               this.handleRequestFinished()
-              
             })
         }
       })

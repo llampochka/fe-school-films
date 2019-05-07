@@ -7,11 +7,16 @@
       "name": "Alena Moskalenko",
       "avatar": "/img/users/1.jpg",
       "friendIDs": [
-        2
+        2,
+        7
       ],
       "requestsIn": [
         5,
-        3
+        3,
+        8,
+        8,
+        8,
+        8
       ],
       "requestsOut": [
         4
@@ -69,18 +74,27 @@
       "email": "a.s.moskalenko@gmail.com",
       "login": "donald",
       "name": "Donald Trump",
-      "pwd": "12345",
-      "pwd2": "12345",
+      "pwd": "1111",
+      "pwd2": "1111",
       "avatar": "/img/users/default.png",
+      "requestsOut": [],
+      "requestsIn": [],
+      "friendIDs": [],
       "id": 6
     },
     {
-      "email": "a.s.moskalenko@gmail.com",
-      "login": "best",
-      "name": "The best of the best",
-      "pwd": "dddd",
-      "pwd2": "dddd",
+      "email": "llampochka@mail.ru",
+      "login": "donald2",
+      "name": "Donald Duck",
+      "pwd": "1111",
+      "pwd2": "1111",
       "avatar": "/img/users/default.png",
+      "requestsOut": [],
+      "requestsIn": [],
+      "friendIDs": [
+        1
+      ],
+      "token": "npybpw2yr1ak1rsppyy9d",
       "id": 7
     }
   ],

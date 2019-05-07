@@ -94,18 +94,21 @@ class UserServiceClass extends ServerExchangeClass {
           possibleFriend.requestsIn.push(user.id)
           return this.updateOne(possibleFriend)
         })
-        .then(possibleFriend => {
+        .then(() => {
           user.requestsOut.push(sendToID)
-          return this.updateOne(user)
-            .then(savedUser => {
-              resolve({
-                'user': savedUser,
-                'possibleFriend': possibleFriend
-              })
-            })
-            .catch(err => {
-              reject(err)
-            })
+          return this.updateOne(user)            
+        })
+        // .then(savedUser => {
+        //   resolve({
+        //     'user': savedUser,
+        //     'possibleFriend': possibleFriend
+        //   })
+        // })
+        .then(savedUser => {
+          resolve(savedUser)
+        })
+        .catch(err => {
+          reject(err)
         })
     })
   }
