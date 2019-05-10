@@ -7,12 +7,11 @@
       "name": "Alena Moskalenko",
       "avatar": "/img/users/1.jpg",
       "friendIDs": [
-        2,
-        7
+        7,
+        3,
+        5
       ],
       "requestsIn": [
-        5,
-        3,
         8,
         8,
         8,
@@ -28,9 +27,7 @@
       "token": "G52ZNbatYdd7JYavgOV867urUIozibm15sCl4hrFbV3YbpchTglJ7tkQPywOuXOR",
       "name": "Jack Daniels",
       "avatar": "/img/users/2.jpg",
-      "friendIDs": [
-        1
-      ],
+      "friendIDs": [],
       "requestsIn": [],
       "requestsOut": []
     },
@@ -40,11 +37,11 @@
       "token": "yf6b7Hf7gpzFuQqrnCQMXrHlKxGqAS50sNcosuhI0Bas7Xsv33PEtLKMRGGOxzwb",
       "name": "Tequila Sunrise",
       "avatar": "/img/users/3.png",
-      "friendIDs": [],
-      "requestsIn": [],
-      "requestsOut": [
+      "friendIDs": [
         1
-      ]
+      ],
+      "requestsIn": [],
+      "requestsOut": []
     },
     {
       "id": 4,
@@ -64,11 +61,11 @@
       "token": "iudZAvS2ajboZrkyLoMAyU8ZyIYSeYCFuDZ7f3WY9fZIeAXc9qj06uVv2PdH7mmL",
       "name": "Bacardi Mojito",
       "avatar": "/img/users/5.jpeg",
-      "friendIDs": [],
-      "requestsIn": [],
-      "requestsOut": [
+      "friendIDs": [
         1
-      ]
+      ],
+      "requestsIn": [],
+      "requestsOut": []
     },
     {
       "email": "a.s.moskalenko@gmail.com",
@@ -113,8 +110,8 @@
       "imdbRating": "7.8",
       "isFavorite": true,
       "isWatched": true,
-      "userRating": 9,
-      "rating": 9
+      "userRating": 8,
+      "rating": 8
     },
     {
       "id": 2,
@@ -489,6 +486,203 @@
       ],
       "userId": 1,
       "id": 28
+    },
+    {
+      "title": "Forrest Gump",
+      "year": "1994",
+      "director": "Robert Zemeckis",
+      "img": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "imdbRating": "8.8",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "userId": 1,
+      "id": 29,
+      "isFavorite": false,
+      "isWatched": false
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 30
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 31
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 32
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 33
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 34
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 35
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 36
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 37
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 38
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 39
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 40
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 41
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 42
+    },
+    {
+      "title": "One Flew Over the Cuckoo's Nest",
+      "year": "1975",
+      "director": "Milos Forman",
+      "img": "https://m.media-amazon.com/images/M/MV5BZjA0OWVhOTAtYWQxNi00YzNhLWI4ZjYtNjFjZTEyYjJlNDVlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "imdbRating": "8.7",
+      "genres": [
+        "Drama"
+      ],
+      "userId": 1,
+      "id": 43
+    },
+    {
+      "title": "The Godfather",
+      "year": "1972",
+      "director": "Francis Ford Coppola",
+      "img": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Action"
+      ],
+      "imdbRating": "9",
+      "userId": 1,
+      "id": 44
     }
   ],
   "comments": [
@@ -615,6 +809,24 @@
       "countLikes": 0,
       "countDislikes": 0,
       "id": 14
+    },
+    {
+      "text": "second",
+      "userId": 1,
+      "date": 1557508593,
+      "movieId": 1,
+      "countLikes": 0,
+      "countDislikes": 0,
+      "id": 15
+    },
+    {
+      "text": "test",
+      "userId": 1,
+      "date": 1557518431,
+      "movieId": 4,
+      "countLikes": 0,
+      "countDislikes": 0,
+      "id": 16
     }
   ],
   "likes": [
@@ -699,6 +911,26 @@
       "userId": 1,
       "commentId": 11,
       "id": 8
+    },
+    {
+      "userId": 1,
+      "commentId": 15,
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "commentId": 15,
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "commentId": 15,
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "commentId": 16,
+      "id": 12
     }
   ]
 }
