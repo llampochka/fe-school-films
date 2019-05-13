@@ -8,8 +8,7 @@
       "avatar": "/img/users/1.jpg",
       "friendIDs": [
         7,
-        3,
-        5
+        3
       ],
       "requestsIn": [
         8,
@@ -18,7 +17,8 @@
         8
       ],
       "requestsOut": [
-        4
+        4,
+        5
       ]
     },
     {
@@ -61,10 +61,10 @@
       "token": "iudZAvS2ajboZrkyLoMAyU8ZyIYSeYCFuDZ7f3WY9fZIeAXc9qj06uVv2PdH7mmL",
       "name": "Bacardi Mojito",
       "avatar": "/img/users/5.jpeg",
-      "friendIDs": [
+      "friendIDs": [],
+      "requestsIn": [
         1
       ],
-      "requestsIn": [],
       "requestsOut": []
     },
     {
@@ -108,7 +108,7 @@
         "Romance"
       ],
       "imdbRating": "7.8",
-      "isFavorite": true,
+      "isFavorite": false,
       "isWatched": true,
       "userRating": 8,
       "rating": 8
@@ -503,162 +503,6 @@
       "isWatched": false
     },
     {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 30
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 31
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 32
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 33
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 34
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 35
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 36
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 37
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 38
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 39
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 40
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 41
-    },
-    {
-      "title": "12 Angry Men",
-      "year": "1957",
-      "director": "Sidney Lumet",
-      "img": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "userId": 1,
-      "id": 42
-    },
-    {
       "title": "One Flew Over the Cuckoo's Nest",
       "year": "1975",
       "director": "Milos Forman",
@@ -683,6 +527,126 @@
       "imdbRating": "9",
       "userId": 1,
       "id": 44
+    },
+    {
+      "title": "Titanic",
+      "year": 1997,
+      "director": "James Cameron",
+      "img": "/img/movies/1.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "imdbRating": "7.8",
+      "userId": 7,
+      "id": 45
+    },
+    {
+      "title": "Titanic",
+      "year": 1997,
+      "director": "James Cameron",
+      "img": "/img/movies/1.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "imdbRating": "7.8",
+      "userId": 1,
+      "id": 46
+    },
+    {
+      "title": "Titanic",
+      "year": 1997,
+      "director": "James Cameron",
+      "img": "/img/movies/1.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "imdbRating": "7.8",
+      "userId": 1,
+      "id": 47
+    },
+    {
+      "title": "Titanic",
+      "year": 1997,
+      "director": "James Cameron",
+      "img": "/img/movies/1.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "imdbRating": "7.8",
+      "userId": 1,
+      "id": 48
+    },
+    {
+      "title": "Titanic",
+      "year": 1997,
+      "director": "James Cameron",
+      "img": "/img/movies/1.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "imdbRating": "7.8",
+      "userId": 1,
+      "id": 49
+    },
+    {
+      "title": "Titanic",
+      "year": 1997,
+      "director": "James Cameron",
+      "img": "/img/movies/1.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "imdbRating": "7.8",
+      "userId": 1,
+      "id": 50
+    },
+    {
+      "title": "Titanic",
+      "year": 1997,
+      "director": "James Cameron",
+      "img": "/img/movies/1.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "imdbRating": "7.8",
+      "userId": 1,
+      "id": 51
+    },
+    {
+      "title": "Goodfellas",
+      "year": "1990",
+      "director": "Martin Scorsese",
+      "img": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "imdbRating": "8.7",
+      "genres": [
+        "Biography",
+        "Crime",
+        "Drama"
+      ],
+      "userId": 7,
+      "id": 52,
+      "isFavorite": true
+    },
+    {
+      "title": "Goodfellas",
+      "year": "1990",
+      "director": "Martin Scorsese",
+      "img": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "genres": [
+        "Biography",
+        "Crime",
+        "Drama"
+      ],
+      "imdbRating": "8.7",
+      "userId": 1,
+      "id": 53
     }
   ],
   "comments": [
@@ -884,6 +848,11 @@
       "userId": 1,
       "commentId": 10,
       "id": 18
+    },
+    {
+      "userId": 1,
+      "commentId": 14,
+      "id": 19
     }
   ],
   "dislikes": [

@@ -1,7 +1,13 @@
 <template>
   <div>
     <h1>Your friends</h1>
-    <friends-list :col="12" :user="user" v-if="user.id" :friends="friends"></friends-list>
+    <friends-list
+      :col="12"
+      :user="user"
+      v-if="user.id"
+      :friends="friends"
+      @friendsListUpdated="handleFriendsListUpdated"
+    ></friends-list>
   </div>
 </template>
 
@@ -21,8 +27,8 @@ export default {
       user: {},
       friends: []
     }
-  },  
-  created: function() {
+  },
+  created: function () {
     const userID = this.currentUser && this.currentUser.id
 
     if (userID) {
@@ -44,7 +50,9 @@ export default {
     }
   },
   methods: {
-    
+    handleFriendsListUpdated(friends) {
+      this.friends = friends
+    }
   },
   computed: {
     currentUser() {

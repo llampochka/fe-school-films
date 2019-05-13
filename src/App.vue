@@ -6,7 +6,7 @@
         <div class="container">
           <b-navbar-brand href="/">
             <!-- <span><font-awesome-icon icon="video" /></span> Movies -->
-            <img src="/img/logo.png" height="40"/> Movies
+            <img src="/img/logo.png" height="50"/> Movies
           </b-navbar-brand>
 
           <b-navbar-toggle target="nav_collapse"/>

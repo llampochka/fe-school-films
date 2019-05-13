@@ -10,7 +10,7 @@
             <b-dropdown-item
               @click="setSortField(field.value, field.title)"
               v-for="(field, index) in sortFields"
-              :key="index"
+              :key="index" 
             >{{ field.title }}</b-dropdown-item>
           </b-dropdown>
         </b-input-group-append>
@@ -21,6 +21,7 @@
           :pressed="sortProps.direction === 'asc'"
           variant="primary"
           @click="setSortDirection('asc')"
+          :disabled="sortingDisabled"
         >
           <font-awesome-icon icon="caret-up"/>
         </b-button>
@@ -28,6 +29,7 @@
           :pressed="sortProps.direction === 'desc'"
           variant="primary"
           @click="setSortDirection('desc')"
+          :disabled="sortingDisabled"
         >
           <font-awesome-icon icon="caret-down"/>
         </b-button>
@@ -139,7 +141,11 @@ export default {
       this.$emit(CHANGE_PROPS, this.sortProps, this.filterProps, this.checkedProps)
     }
   },
-  computed: {}
+  computed: {
+    sortingDisabled() {
+      return this.sortProps.by == null
+    }
+  }
 };
 </script>
 

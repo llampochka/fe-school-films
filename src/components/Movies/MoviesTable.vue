@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <b-table
       show-empty
       striped
@@ -15,7 +14,9 @@
       :sort-direction="sortDirection"
     >
       <template slot="title" slot-scope="data">
-        <span v-html="data.value"></span>
+        <b-link :to="{name: $routeNames.MovieCard, params: {movieID: data.item.id}}">
+          <span v-html="data.item.title"></span>
+        </b-link>
       </template>
       <template slot="year" slot-scope="data">
         <span v-html="data.value"></span>

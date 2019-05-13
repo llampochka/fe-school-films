@@ -7,6 +7,9 @@
 h1, h2 {
     margin-bottom: 0.5em;
 }
+.navbar  {
+    padding: 0 1rem;
+}
 .navbar-brand span {
     font-size: 20px;
     line-height: 38px;
@@ -18,6 +21,10 @@ h1, h2 {
     display: inline-block;
     text-align: center;
 }
+.navbar-nav {
+    margin-top: -5px;
+}
+
 .content-header {
     margin-bottom: 0.5em;
 
